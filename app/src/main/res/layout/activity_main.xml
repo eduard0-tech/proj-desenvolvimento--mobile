@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome" tools:context=".MainActivity">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:importantForAccessibility="no" android:scaleType="fitXY" android:src="@drawable/bg_pattern" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:gravity="center_horizontal" android:paddingStart="36dp" android:paddingEnd="36dp" android:paddingTop="48dp" android:paddingBottom="20dp">
+            <TextView android:id="@+id/welcome_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/welcome" android:textColor="@color/muted" android:textSize="13sp" android:letterSpacing="0.2" />
+            <ImageView android:id="@+id/gyema_logo" android:layout_width="150dp" android:layout_height="150dp" android:layout_marginTop="18dp"
+                android:src="@drawable/ic_gyema" android:contentDescription="@string/brand_description" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center_vertical" android:layout_marginTop="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/brand"
+                    android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold" android:fontFamily="sans-serif-black" />
+                <TextView android:layout_width="84dp" android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_badge" android:gravity="center" android:paddingVertical="2dp"
+                    android:text="@string/training" android:textColor="@color/muted" android:textSize="9sp" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/academy"
+                android:textColor="@color/orange_text" android:textSize="9sp" android:letterSpacing="0.08" />
+            <TextView android:id="@+id/welcome_tagline" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:gravity="center" android:text="@string/tagline"
+                android:textColor="@color/white" android:textSize="19sp" android:textStyle="bold" />
+            <TextView android:id="@+id/welcome_description" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:gravity="center" android:text="@string/description"
+                android:textColor="@color/orange_text" android:textSize="11sp" android:lineSpacingExtra="5dp" />
+            <Space android:layout_width="1dp" android:layout_height="64dp" android:layout_weight="1" />
+            <Button android:id="@+id/button_login" android:layout_width="match_parent" android:layout_height="58dp"
+                android:background="@drawable/bg_primary" android:backgroundTint="@null" android:stateListAnimator="@null"
+                android:drawableEnd="@drawable/ic_arrow" android:paddingStart="36dp" android:paddingEnd="36dp"
+                android:fontFamily="sans-serif-medium" android:text="@string/login" android:textAllCaps="false" android:textColor="#120C09" android:textSize="14sp" />
+            <Button android:id="@+id/button_register" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="26dp"
+                android:background="@drawable/bg_secondary" android:backgroundTint="@null" android:stateListAnimator="@null"
+                android:paddingHorizontal="12dp" android:fontFamily="sans-serif-medium" android:text="@string/register"
+                android:textAllCaps="false" android:textColor="@color/white" android:textSize="14sp" />
+            <Space android:layout_width="1dp" android:layout_height="48dp" android:layout_weight="0.7" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center">
+                <Button android:id="@+id/button_terms" style="@style/WelcomeFooter" android:text="@string/terms" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="·" android:textColor="@color/orange_text" android:importantForAccessibility="no" />
+                <Button android:id="@+id/button_privacy" style="@style/WelcomeFooter" android:text="@string/privacy" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="·" android:textColor="@color/orange_text" android:importantForAccessibility="no" />
+                <Button android:id="@+id/button_support" style="@style/WelcomeFooter" android:text="@string/support" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
