@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores base do tema GymApp -->
+    <color name="gym_bg">#090C15</color>
+    <color name="gym_card_bg">#121828</color>
+    <color name="gym_orange">#FF5500</color>
+    <color name="gym_orange_alpha">#33FF5500</color>
+    <color name="gym_green">#22C55E</color>
+    <color name="gym_text_primary">#FFFFFF</color>
+    <color name="gym_text_secondary">#94A3B8</color>
+</resources>
