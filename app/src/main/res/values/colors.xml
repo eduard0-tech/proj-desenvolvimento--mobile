@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_dark">#0B0E23</color>
+    <color name="orange_primary">#E55B13</color>
+    <color name="input_bg">#171936</color>
+    <color name="input_hint">#7E84A3</color>
+    <color name="pill_bg">#202342</color>
+    <color name="pill_text">#9499C3</color>
+    <color name="text_muted">#9AA0BD</color>
+    <color name="stepper_line">#383C5C</color>
+</resources>

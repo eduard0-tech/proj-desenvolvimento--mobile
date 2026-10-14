@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Gyema</string>
+    <string name="title_gyema">GYEMA</string>
+    <string name="tag_academia_unifor">ACADEMIA UNIFOR</string>
+    <string name="title_cadastre_conta">Cadastre a sua conta</string>
+    <string name="subtitle_cadastre_conta">Registre-se para aproveitar ao máximo a\nestrutura da Academia UNIFOR</string>
+    <string name="step_1_num">1</string>
+    <string name="step_2_num">2</string>
+    <string name="step_3_num">3</string>
+    <string name="step_1_title">Cadastro</string>
+    <string name="step_2_title">Informações\nPessoais</string>
+    <string name="step_3_title">Teste de\nprontidão</string>
+    <string name="hint_nome_completo">Nome completo</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="password_req_title">Sua senha deve conter:</string>
+    <string name="password_req_body">Pelo menos 8 caracteres, letras e números e um caractere especial (ex: @, #, !)</string>
+    <string name="btn_avancar">AVANÇAR</string>
+    <string name="already_have_account"><![CDATA[Já tem uma conta? <font color="#E55B13"><b>Entrar em sua conta</b></font>]]></string>
+    <string name="cd_back">Voltar</string>
+    <string name="cd_logo">Logo Gyema</string>
+</resources>
