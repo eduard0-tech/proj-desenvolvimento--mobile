@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="treino_bg">#0B1130</color>
+    <color name="treino_card">#141B3D</color>
+    <color name="treino_orange">#E64600</color>
+    <color name="treino_orange_soft">#26E64600</color>
+    <color name="treino_text_primary">#FFFFFF</color>
+    <color name="treino_text_secondary">#9BA1C7</color>
+    <color name="treino_icon_muted">#8F95B5</color>
+    <color name="treino_arrow_bg">#1E264F</color>
+    <color name="treino_nav_bg">#141B3D</color>
+</resources>

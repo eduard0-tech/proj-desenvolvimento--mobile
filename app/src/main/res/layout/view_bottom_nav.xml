@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_nav"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/navInicio"
+        style="@style/NavItem"
+        android:drawableTop="@drawable/ic_home"
+        android:text="@string/nav_inicio" />
+
+    <TextView
+        android:id="@+id/navTreinos"
+        style="@style/NavItem"
+        android:drawableTop="@drawable/ic_dumbbell"
+        android:drawableTint="@color/treino_orange"
+        android:text="@string/nav_treinos"
+        android:textColor="@color/treino_orange"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/navAcademia"
+        style="@style/NavItem"
+        android:drawableTop="@drawable/ic_academia"
+        android:text="@string/nav_academia" />
+
+    <TextView
+        android:id="@+id/navComunidade"
+        style="@style/NavItem"
+        android:drawableTop="@drawable/ic_comunidade"
+        android:text="@string/nav_comunidade" />
+
+    <TextView
+        android:id="@+id/navPerfil"
+        style="@style/NavItem"
+        android:drawableTop="@drawable/ic_perfil"
+        android:text="@string/nav_perfil" />
+</LinearLayout>

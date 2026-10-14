@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="meus_treinos_titulo">Meus treinos</string>
+    <string name="meus_treinos_tab_atual">Atual</string>
+    <string name="meus_treinos_tab_historico">Histórico</string>
+    <string name="meus_treinos_treino_do_dia">TREINO DO DIA</string>
+    <string name="meus_treinos_abrir">Abrir treino</string>
+
+    <string name="nav_inicio">Início</string>
+    <string name="nav_treinos">Treinos</string>
+    <string name="nav_academia">Academia</string>
+    <string name="nav_comunidade">Comunidade</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <plurals name="meus_treinos_qtd_exercicios">
+        <item quantity="one">%d exercício</item>
+        <item quantity="other">%d exercícios</item>
+    </plurals>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardTreino"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_card_treino"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvNomeTreino"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/treino_text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvBadgeDoDia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Treino A — Ficha Principal" />
+
+    <TextView
+        android:id="@+id/tvGrupoMuscular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/treino_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvNomeTreino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNomeTreino"
+        tools:text="Peito e Tríceps" />
+
+    <TextView
+        android:id="@+id/tvBadgeDoDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_treino_dia"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="5dp"
+        android:text="@string/meus_treinos_treino_do_dia"
+        android:textColor="@color/treino_orange"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvGrupoMuscular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvNomeTreino"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/btnIr"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_circle_cinza"
+        android:contentDescription="@string/meus_treinos_abrir"
+        android:padding="6dp"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGrupoMuscular"
+        app:tint="@color/treino_text_primary" />
+
+    <ImageView
+        android:id="@+id/ivExercicios"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_dumbbell"
+        app:layout_constraintBottom_toBottomOf="@id/btnIr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnIr"
+        app:tint="@color/treino_icon_muted" />
+
+    <TextView
+        android:id="@+id/tvQtdExercicios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/treino_text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnIr"
+        app:layout_constraintStart_toEndOf="@id/ivExercicios"
+        app:layout_constraintTop_toTopOf="@id/btnIr"
+        tools:text="6 exercícios" />
+</androidx.constraintlayout.widget.ConstraintLayout>

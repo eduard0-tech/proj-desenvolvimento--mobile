@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/treino_bg">
+
+    <!-- Título da Tela -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/meus_treinos_titulo"
+        android:textColor="@color/treino_text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Meus Treinos" />
+
+    <!-- Container Selector de Abas (Tabs) -->
+    <LinearLayout
+        android:id="@+id/containerTabs"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_tabs"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo">
+
+        <TextView
+            android:id="@+id/tabAtual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tab_selecionada"
+            android:gravity="center"
+            android:text="@string/meus_treinos_tab_atual"
+            android:textColor="@color/treino_text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="Treino Atual" />
+
+        <TextView
+            android:id="@+id/tabHistorico"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/meus_treinos_tab_historico"
+            android:textColor="@color/treino_text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="Histórico" />
+    </LinearLayout>
+
+    <!-- Lista de Cards de Treino -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/navContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerTabs"
+        tools:listitem="@layout/item_treino" />
+
+    <!-- Bottom Navigation Bar Float -->
+    <FrameLayout
+        android:id="@+id/navContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include layout="@layout/view_bottom_nav" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
