@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
-    android:background="@drawable/bg_card_treino"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:background="@drawable/bg_card_exercicio"
     android:padding="16dp">
 
+    <!-- Caixa com o número do exercício (1, 2, 3...) -->
     <TextView
-        android:id="@+id/tvNumero"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
+        android:id="@+id/tvNumeroExercicio"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:background="@drawable/bg_numero_exercicio"
         android:gravity="center"
+        android:text="1"
         android:textColor="@color/treino_orange"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        tools:text="1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <!-- Nome do Exercício -->
+    <TextView
+        android:id="@+id/tvNomeExercicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_marginStart="16dp"
+        android:text="Supino reto"
+        android:textColor="@color/treino_text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNumeroExercicio"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvNomeExercicio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/treino_text_primary"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:text="Supino reto" />
+    <!-- Detalhes (Séries x Repetições) -->
+    <TextView
+        android:id="@+id/tvDetalhesSerie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:text="4 séries x 12 repetições"
+        android:textColor="@color/treino_text_secondary"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNumeroExercicio"
+        app:layout_constraintTop_toBottomOf="@id/tvNomeExercicio" />
 
-        <TextView
-            android:id="@+id/tvSeriesRepeticoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/treino_text_secondary"
-            android:textSize="12sp"
-            tools:text="4 séries x 12 repetições" />
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
