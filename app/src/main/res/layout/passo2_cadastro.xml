@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="32dp">
+
+        <!-- botao voltar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_back_button"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/cd_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_gyema_logo"
+            android:contentDescription="@string/cd_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- titulo -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.08"
+            android:text="@string/title_gyema"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+        <!-- tag academia -->
+        <TextView
+            android:id="@+id/tagAcademia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_pill_academia"
+            android:letterSpacing="0.05"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/tag_academia_unifor"
+            android:textColor="@color/pill_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+        <!-- subtitulo -->
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_finalize_cadastro"
+            android:textColor="@color/orange_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tagAcademia" />
+
+        <!-- stepper -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutStepper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSubtitle">
+
+            <!-- linha passo 1 ao 2 -->
+            <View
+                android:id="@+id/lineStep1To2"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep1"
+                app:layout_constraintEnd_toStartOf="@id/circleStep2"
+                app:layout_constraintStart_toEndOf="@id/circleStep1"
+                app:layout_constraintTop_toTopOf="@id/circleStep1" />
+
+            <!-- linha passo 2 ao 3 -->
+            <View
+                android:id="@+id/lineStep2To3"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep2"
+                app:layout_constraintEnd_toStartOf="@id/circleStep3"
+                app:layout_constraintStart_toEndOf="@id/circleStep2"
+                app:layout_constraintTop_toTopOf="@id/circleStep2" />
+
+            <!-- passo 1 circulo -->
+            <TextView
+                android:id="@+id/circleStep1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_1_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep1To2"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 2 circulo -->
+            <TextView
+                android:id="@+id/circleStep2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_active"
+                android:gravity="center"
+                android:text="@string/step_2_num"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep2To3"
+                app:layout_constraintStart_toEndOf="@id/lineStep1To2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 3 circulo -->
+            <TextView
+                android:id="@+id/circleStep3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_3_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lineStep2To3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 1 rotulo -->
+            <TextView
+                android:id="@+id/labelStep1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_1_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/labelStep2"
+                app:layout_constraintTop_toBottomOf="@id/circleStep1" />
+
+            <!-- passo 2 rotulo -->
+            <TextView
+                android:id="@+id/labelStep2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_2_title"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/labelStep1"
+                app:layout_constraintEnd_toStartOf="@id/labelStep3"
+                app:layout_constraintTop_toBottomOf="@id/circleStep2" />
+
+            <!-- passo 3 rotulo -->
+            <TextView
+                android:id="@+id/labelStep3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_3_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/labelStep2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circleStep3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- campo cpf -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutCpf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hint_cpf"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_id_card"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutStepper">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- legenda colaboradores -->
+        <TextView
+            android:id="@+id/textAlunosColaboradores"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/subtitle_alunos_colaboradores"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutCpf" />
+
+        <!-- campo matricula -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutMatricula"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/hint_matricula"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textAlunosColaboradores">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingVertical="16dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo data nascimento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutDataNascimento"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:hint="@string/hint_data_nascimento"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_calendar"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/inputLayoutGenero"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutMatricula">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editDataNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo genero -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutGenero"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            android:hint="@string/hint_genero"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_gender"
+            app:startIconTint="@color/input_hint"
+            app:endIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/inputLayoutDataNascimento"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutMatricula">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/editGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingVertical="16dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo peso -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutPeso"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:hint="@string/hint_peso"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_kettlebell"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/inputLayoutAltura"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutDataNascimento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo altura -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutAltura"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            android:hint="@string/hint_altura"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_height_ruler"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/inputLayoutPeso"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutDataNascimento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- botao avancar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAvancar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/orange_primary"
+            android:text="@string/btn_avancar"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="end"
+            app:iconPadding="12dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutPeso" />
+
+        <!-- links rodape -->
+        <TextView
+            android:id="@+id/textFooterLinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/footer_terms_privacy_support"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAvancar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

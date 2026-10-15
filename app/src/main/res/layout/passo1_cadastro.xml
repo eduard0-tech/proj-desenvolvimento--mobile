@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="32dp">
+
+        <!-- botao voltar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_back_button"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/cd_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_gyema_logo"
+            android:contentDescription="@string/cd_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- titulo -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.08"
+            android:text="@string/title_gyema"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+        <!-- tag academia -->
+        <TextView
+            android:id="@+id/tagAcademia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_pill_academia"
+            android:letterSpacing="0.05"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/tag_academia_unifor"
+            android:textColor="@color/pill_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+        <!-- subtitulo -->
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_cadastre_conta"
+            android:textColor="@color/orange_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tagAcademia" />
+
+        <!-- descricao -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/subtitle_cadastre_conta"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSubtitle" />
+
+        <!-- stepper -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutStepper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDescription">
+
+            <!-- linha passo 1 ao 2 -->
+            <View
+                android:id="@+id/lineStep1To2"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep1"
+                app:layout_constraintEnd_toStartOf="@id/circleStep2"
+                app:layout_constraintStart_toEndOf="@id/circleStep1"
+                app:layout_constraintTop_toTopOf="@id/circleStep1" />
+
+            <!-- linha passo 2 ao 3 -->
+            <View
+                android:id="@+id/lineStep2To3"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep2"
+                app:layout_constraintEnd_toStartOf="@id/circleStep3"
+                app:layout_constraintStart_toEndOf="@id/circleStep2"
+                app:layout_constraintTop_toTopOf="@id/circleStep2" />
+
+            <!-- passo 1 circulo -->
+            <TextView
+                android:id="@+id/circleStep1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_active"
+                android:gravity="center"
+                android:text="@string/step_1_num"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep1To2"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 2 circulo -->
+            <TextView
+                android:id="@+id/circleStep2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_2_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep2To3"
+                app:layout_constraintStart_toEndOf="@id/lineStep1To2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 3 circulo -->
+            <TextView
+                android:id="@+id/circleStep3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_3_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lineStep2To3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 1 rotulo -->
+            <TextView
+                android:id="@+id/labelStep1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_1_title"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/labelStep2"
+                app:layout_constraintTop_toBottomOf="@id/circleStep1" />
+
+            <!-- passo 2 rotulo -->
+            <TextView
+                android:id="@+id/labelStep2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_2_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/labelStep1"
+                app:layout_constraintEnd_toStartOf="@id/labelStep3"
+                app:layout_constraintTop_toBottomOf="@id/circleStep2" />
+
+            <!-- passo 3 rotulo -->
+            <TextView
+                android:id="@+id/labelStep3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_3_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/labelStep2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circleStep3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- campo nome -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutNome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hint_nome_completo"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutStepper">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutNome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- campo senha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutSenha"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_senha"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/input_hint"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- requisitos da senha -->
+        <LinearLayout
+            android:id="@+id/layoutPasswordReq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutSenha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/textPasswordReqTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_req_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textPasswordReqBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/password_req_body"
+                android:textColor="@color/orange_primary"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <!-- botao avancar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAvancar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/orange_primary"
+            android:text="@string/btn_avancar"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="end"
+            app:iconPadding="12dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutPasswordReq" />
+
+        <!-- link login -->
+        <TextView
+            android:id="@+id/textLoginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/already_have_account"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/btnAvancar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

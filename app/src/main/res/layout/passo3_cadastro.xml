@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="32dp">
+
+        <!-- botao voltar -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_back_button"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/cd_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_gyema_logo"
+            android:contentDescription="@string/cd_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- titulo -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.08"
+            android:text="@string/title_gyema"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+        <!-- tag academia -->
+        <TextView
+            android:id="@+id/tagAcademia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_pill_academia"
+            android:letterSpacing="0.05"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/tag_academia_unifor"
+            android:textColor="@color/pill_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+        <!-- subtitulo -->
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/title_finalize_cadastro"
+            android:textColor="@color/orange_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tagAcademia" />
+
+        <!-- stepper -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutStepper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSubtitle">
+
+            <!-- linha passo 1 ao 2 -->
+            <View
+                android:id="@+id/lineStep1To2"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep1"
+                app:layout_constraintEnd_toStartOf="@id/circleStep2"
+                app:layout_constraintStart_toEndOf="@id/circleStep1"
+                app:layout_constraintTop_toTopOf="@id/circleStep1" />
+
+            <!-- linha passo 2 ao 3 -->
+            <View
+                android:id="@+id/lineStep2To3"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/stepper_line"
+                app:layout_constraintBottom_toBottomOf="@id/circleStep2"
+                app:layout_constraintEnd_toStartOf="@id/circleStep3"
+                app:layout_constraintStart_toEndOf="@id/circleStep2"
+                app:layout_constraintTop_toTopOf="@id/circleStep2" />
+
+            <!-- passo 1 circulo -->
+            <TextView
+                android:id="@+id/circleStep1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_1_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep1To2"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 2 circulo -->
+            <TextView
+                android:id="@+id/circleStep2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_inactive"
+                android:gravity="center"
+                android:text="@string/step_2_num"
+                android:textColor="@color/bg_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/lineStep2To3"
+                app:layout_constraintStart_toEndOf="@id/lineStep1To2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 3 circulo -->
+            <TextView
+                android:id="@+id/circleStep3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_step_active"
+                android:gravity="center"
+                android:text="@string/step_3_num"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lineStep2To3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- passo 1 rotulo -->
+            <TextView
+                android:id="@+id/labelStep1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_1_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/labelStep2"
+                app:layout_constraintTop_toBottomOf="@id/circleStep1" />
+
+            <!-- passo 2 rotulo -->
+            <TextView
+                android:id="@+id/labelStep2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_2_title"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/labelStep1"
+                app:layout_constraintEnd_toStartOf="@id/labelStep3"
+                app:layout_constraintTop_toBottomOf="@id/circleStep2" />
+
+            <!-- passo 3 rotulo -->
+            <TextView
+                android:id="@+id/labelStep3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/step_3_title"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/labelStep2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circleStep3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- campo numero contato -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutContato"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hint_numero_contato"
+            android:textColorHint="@color/input_hint"
+            app:hintTextColor="@color/input_hint"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="@color/input_hint"
+            app:boxBackgroundColor="@color/input_bg"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutStepper">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editContato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:paddingVertical="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- container questionario -->
+        <LinearLayout
+            android:id="@+id/layoutQuestionnaire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_questionnaire_card"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutContato">
+
+            <!-- pergunta 1 -->
+            <TextView
+                android:id="@+id/textQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q1_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ1Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ1Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 2 -->
+            <TextView
+                android:id="@+id/textQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q2_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ2Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ2Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 3 -->
+            <TextView
+                android:id="@+id/textQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q3_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ3Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ3Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 4 -->
+            <TextView
+                android:id="@+id/textQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q4_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ4Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ4Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 5 -->
+            <TextView
+                android:id="@+id/textQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q5_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ5Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ5Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 6 -->
+            <TextView
+                android:id="@+id/textQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q6_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ6Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ6Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 7 -->
+            <TextView
+                android:id="@+id/textQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q7_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ7Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ7Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 8 -->
+            <TextView
+                android:id="@+id/textQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q8_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ8Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ8Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 9 -->
+            <TextView
+                android:id="@+id/textQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q9_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ9Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ9Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+            <!-- pergunta 10 -->
+            <TextView
+                android:id="@+id/textQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/q10_title"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQ10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioQ10Sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_sim"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary"
+                    android:layout_marginEnd="32dp" />
+
+                <RadioButton
+                    android:id="@+id/radioQ10Nao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_nao"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:buttonTint="@color/orange_primary" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- botao avancar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAvancar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/orange_primary"
+            android:text="@string/btn_avancar"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="end"
+            app:iconPadding="12dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutQuestionnaire" />
+
+        <!-- links rodape -->
+        <TextView
+            android:id="@+id/textFooterLinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/footer_terms_privacy_support"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAvancar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

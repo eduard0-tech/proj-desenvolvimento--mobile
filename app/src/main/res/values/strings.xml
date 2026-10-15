@@ -4,6 +4,7 @@
     <string name="tag_academia_unifor">ACADEMIA UNIFOR</string>
     <string name="title_cadastre_conta">Cadastre a sua conta</string>
     <string name="subtitle_cadastre_conta">Registre-se para aproveitar ao máximo a\nestrutura da Academia UNIFOR</string>
+    <string name="title_finalize_cadastro">Finalize o cadastro</string>
     <string name="step_1_num">1</string>
     <string name="step_2_num">2</string>
     <string name="step_3_num">3</string>
@@ -15,8 +16,29 @@
     <string name="hint_senha">Senha</string>
     <string name="password_req_title">Sua senha deve conter:</string>
     <string name="password_req_body">Pelo menos 8 caracteres, letras e números e um caractere especial (ex: @, #, !)</string>
-    <string name="btn_avancar">AVANÇAR</string>
+    <string name="hint_cpf">Digite o seu cpf</string>
+    <string name="subtitle_alunos_colaboradores">Apenas para alunos ou colaboradores</string>
+    <string name="hint_matricula">Matrícula (opcional)</string>
+    <string name="hint_data_nascimento">27/06/1995</string>
+    <string name="hint_genero">Gênero</string>
+    <string name="hint_peso">Peso</string>
+    <string name="hint_altura">Altura</string>
+    <string name="hint_numero_contato">Número de contato</string>
+    <string name="q1_title">1. Já praticou musculação ou treinamento funcional?</string>
+    <string name="q2_title">2. Já sofreu alguma lesão muscular?</string>
+    <string name="q3_title">3. Apresenta alguma dor muscular ou articular?</string>
+    <string name="q4_title">4. Fez alguma cirurgia nos ultimos meses?</string>
+    <string name="q5_title">5. Faz uso de algum medicamento?</string>
+    <string name="q6_title">6. Faz exames cardiológicos?</string>
+    <string name="q7_title">7. Tem pressão alta?</string>
+    <string name="q8_title">8. Tem diabetes?</string>
+    <string name="q9_title">9. Apresenta alguma restrição física ou dolorosa?</string>
+    <string name="q10_title">10. Já se sentiu mal durante a prática esportiva?</string>
+    <string name="radio_sim">Sim</string>
+    <string name="radio_nao">Não</string>
+    <string name="btn_avancar">Avançar</string>
     <string name="already_have_account"><![CDATA[Já tem uma conta? <font color="#E55B13"><b>Entrar em sua conta</b></font>]]></string>
+    <string name="footer_terms_privacy_support"><![CDATA[<font color="#FFFFFF"><b>Termos de uso</b></font> &#160;•&#160; <font color="#FFFFFF"><b>Privacidade</b></font> &#160;•&#160; <font color="#FFFFFF"><b>Suporte TI</b></font>]]></string>
     <string name="cd_back">Voltar</string>
     <string name="cd_logo">Logo Gyema</string>
 </resources>
