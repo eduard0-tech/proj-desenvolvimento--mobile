@@ -28,6 +28,12 @@
     <string name="invalid_email">Informe um e-mail válido.</string>
     <string name="required_password">Informe sua senha.</string>
     <string name="authentication_pending">Autenticação ainda não implementada.</string>
-    <string name="recovery_pending">A tela de recuperação de senha será adicionada em breve.</string>
+    <string name="recovery_title">RECUPERAR SENHA</string>
+    <string name="recovery_description">Digite o e-mail cadastrado na sua conta institucional ou pessoal para receber o link de redefinição de acesso.</string>
+    <string name="recovery_email_hint">Digite seu e-mail cadastrado</string>
+    <string name="request_recovery">Solicitar redefinição</string>
+    <string name="recovery_success_title">SENHA RECUPERADA</string>
+    <string name="recovery_success_description">A solicitação foi concluída com sucesso! Realize o login novamente e insira sua nova credencial “senha”.</string>
+    <string name="return_to_login">Realizar Login</string>
     <string name="registration_pending">A tela de cadastro será adicionada em breve.</string>
 </resources>
