@@ -13,4 +13,21 @@
     <string name="privacy">Privacidade</string>
     <string name="support">Suporte TI</string>
     <string name="brand_description">Símbolo Gyema</string>
+    <string name="login_welcome">É BOM TE TER DE VOLTA !</string>
+    <string name="login_description">Acesse com seu email institucional ou\ncadastrado.</string>
+    <string name="email_label">Email</string>
+    <string name="email_hint">Digite seu e-mail</string>
+    <string name="password_label">Senha</string>
+    <string name="password_hint">Digite sua senha</string>
+    <string name="forgot_password"><u>Esqueceu sua senha?</u></string>
+    <string name="remember_user">Lembrar identificação de usuário</string>
+    <string name="no_account">Não tem uma conta? <u><font color="#F4A16D">Cadastre-se</font></u></string>
+    <string name="back">Voltar para boas-vindas</string>
+    <string name="show_password">Mostrar senha</string>
+    <string name="hide_password">Ocultar senha</string>
+    <string name="invalid_email">Informe um e-mail válido.</string>
+    <string name="required_password">Informe sua senha.</string>
+    <string name="authentication_pending">Autenticação ainda não implementada.</string>
+    <string name="recovery_pending">A tela de recuperação de senha será adicionada em breve.</string>
+    <string name="registration_pending">A tela de cadastro será adicionada em breve.</string>
 </resources>
