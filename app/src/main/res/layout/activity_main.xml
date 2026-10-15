@@ -13,63 +13,368 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Header: Logo & Notificação -->
-        <RelativeLayout
+        <!-- Subtítulo Superior -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Histórico e evolução"
+            android:textColor="@color/gym_text_secondary"
+            android:textSize="12sp" />
+
+        <!-- Cabeçalho com Botão Voltar e Título -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_subcard">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="‹"
+                    android:textColor="@color/gym_text_primary"
+                    android:textSize="22sp" />
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="GYEMA"
+                android:layout_marginStart="16dp"
+                android:text="Minha evolução"
                 android:textColor="@color/gym_text_primary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+        </LinearLayout>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:src="@android:drawable/ic_popup_reminder"
-                app:tint="@color/gym_text_primary" />
-        </RelativeLayout>
+        <!-- Card do Calendário -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <!-- Saudação -->
+            <!-- Mês e Setas -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Setembro 2025"
+                    android:textColor="@color/gym_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:text="‹"
+                        android:textColor="@color/gym_text_secondary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center"
+                        android:text="›"
+                        android:textColor="@color/gym_text_secondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Dias da Semana -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="D" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="T" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Q" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Q" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="@color/gym_text_secondary" android:textSize="12sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Linha 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="31" android:textColor="@color/gym_text_secondary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="1" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="2" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="3" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="4" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="5" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="6" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Linha 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="7" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="8" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="9" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="10" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="11" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="12" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="13" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Linha 3 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="14" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="15" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="16" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="17" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="18" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="19" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="20" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Linha 4 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="21" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="22" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="23" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="24" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:background="@drawable/bg_orange_circle" android:gravity="center" android:text="25" android:textColor="@color/gym_text_primary" android:textSize="13sp" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="26" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="27" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Linha 5 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="28" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="29" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="30" android:textColor="@color/gym_text_primary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="1" android:textColor="@color/gym_text_secondary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="2" android:textColor="@color/gym_text_secondary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="3" android:textColor="@color/gym_text_secondary" android:textSize="13sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:gravity="center" android:text="4" android:textColor="@color/gym_text_secondary" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Título da Seção: Evolução de Carga -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Olá, João! 👋"
-            android:textColor="@color/gym_text_primary"
-            android:textSize="24sp"
+            android:layout_marginBottom="12dp"
+            android:text="EVOLUÇÃO DE CARGA"
+            android:textColor="@color/gym_text_secondary"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Vamos para mais um treino hoje?"
-            android:textColor="@color/gym_text_secondary"
-            android:textSize="14sp" />
-
-        <!-- Card: Lotação da Academia -->
+        <!-- Card de Evolução de Carga -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- Junho: 45 kg -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="45 kg"
+                        android:textColor="@color/gym_orange"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_chart_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Jun"
+                        android:textColor="@color/gym_text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Julho: 60 kg -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="60 kg"
+                        android:textColor="@color/gym_orange"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/bg_chart_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Jul"
+                        android:textColor="@color/gym_text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Agosto: 75 kg -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="75 kg"
+                        android:textColor="@color/gym_orange"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/bg_chart_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ago"
+                        android:textColor="@color/gym_text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Setembro: 90 kg -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="90 kg"
+                        android:textColor="@color/gym_orange"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="135dp"
+                        android:background="@drawable/bg_chart_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Set"
+                        android:textColor="@color/gym_text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Título da Seção: Últimos Treinos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:text="ÚLTIMOS TREINOS"
+            android:textColor="@color/gym_text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Card de Treino 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/bg_card"
             android:orientation="vertical"
             android:padding="16dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lotação da Academia"
+                    android:background="@drawable/bg_subcard"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="25/09"
+                    android:textColor="@color/gym_orange"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="80dp"
+                    android:text="Treino A — Peito e Tríceps"
                     android:textColor="@color/gym_text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -78,347 +383,125 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:background="@drawable/bg_live_tag"
-                    android:paddingHorizontal="10dp"
-                    android:paddingVertical="4dp"
-                    android:text="● AO VIVO"
-                    android:textColor="@color/gym_green"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:layout_centerVertical="true"
+                    android:text="⏱ 45min"
+                    android:textColor="@color/gym_text_secondary"
+                    android:textSize="12sp" />
             </RelativeLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="65%"
-                android:textColor="@color/gym_text_primary"
-                android:textSize="32sp"
-                android:textStyle="bold" />
-
-            <!-- Barra de Progresso Simples -->
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:layout_marginTop="8dp"
-                android:max="100"
-                android:progress="65"
-                android:progressTint="@color/gym_orange" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Moderado (Ideal para treinar)"
+                android:text="Supino reto, Supino inclinado, Crucifixo..."
                 android:textColor="@color/gym_text_secondary"
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Acesso Rápido -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="ACESSO RÁPIDO"
-            android:textColor="@color/gym_text_secondary"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:columnCount="3"
-            android:rowCount="2">
-
-            <!-- Botões Rápidos -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Meu treino"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Academia"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comunidade"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chatbot"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_columnSpan="2"
-                android:layout_columnWeight="2"
-                android:layout_margin="4dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sugestões"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </GridLayout>
-
-        <!-- Minha Semana -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MINHA SEMANA"
-                android:textColor="@color/gym_text_secondary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="3 / 5 Dias"
-                android:textColor="@color/gym_orange"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <!-- Dias da semana em linha -->
+        <!-- Card de Treino 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_orange_card"
-                android:gravity="center"
-                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seg"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
+                    android:background="@drawable/bg_subcard"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="23/09"
+                    android:textColor="@color/gym_orange"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ter"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="80dp"
+                    android:text="Treino B — Costas e Bíceps"
+                    android:textColor="@color/gym_text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="⏱ 50min"
                     android:textColor="@color/gym_text_secondary"
                     android:textSize="12sp" />
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="16"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_orange_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Qua"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="17"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Qui"
-                    android:textColor="@color/gym_text_secondary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="18"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_orange_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sex"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="19"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:layout_margin="2dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sáb"
-                    android:textColor="@color/gym_text_secondary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20"
-                    android:textColor="@color/gym_text_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puxada frontal, Remada curvada, Rosca direta..."
+                android:textColor="@color/gym_text_secondary"
+                android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Treinos Realizados -->
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Card de Treino 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="QUANT. TREINOS REALIZADOS:"
-            android:textColor="@color/gym_text_secondary"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
-            android:text="12 / 30 Mensal"
-            android:textColor="@color/gym_text_primary"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_subcard"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="20/09"
+                    android:textColor="@color/gym_orange"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="80dp"
+                    android:text="Treino C — Pernas Completo"
+                    android:textColor="@color/gym_text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="⏱ 40min"
+                    android:textColor="@color/gym_text_secondary"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agachamento, Leg press, Cadeira extensora..."
+                android:textColor="@color/gym_text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
