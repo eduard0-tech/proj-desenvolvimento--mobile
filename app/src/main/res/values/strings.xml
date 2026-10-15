@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="detalhe_voltar">Voltar</string>
+    <string name="detalhe_titulo">Treino A</string>
+    <string name="detalhe_subtitulo">Peito e Tríceps — Hipertrofia</string>
+    <string name="detalhe_tempo">~45 min</string>
+    <string name="detalhe_iniciar">Iniciar treino</string>
+    <string name="detalhe_series_repeticoes">%1$d séries x %2$d repetições</string>
+</resources>
