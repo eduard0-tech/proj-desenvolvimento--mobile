@@ -73,7 +73,7 @@ class LoginActivity : Activity() {
             if (actionId == EditorInfo.IME_ACTION_DONE) { submit(); true } else false
         }
         findViewById<View>(R.id.button_forgot_password).setOnClickListener {
-            Toast.makeText(this, R.string.recovery_pending, Toast.LENGTH_SHORT).show()
+            PasswordRecoveryDialog().show(fragmentManager, "password_recovery")
         }
         findViewById<View>(R.id.button_login_register).setOnClickListener {
             Toast.makeText(this, R.string.registration_pending, Toast.LENGTH_SHORT).show()
