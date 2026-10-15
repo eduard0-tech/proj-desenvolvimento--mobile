@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exec_voltar">Voltar</string>
+    <string name="exec_titulo">Execução</string>
+    <string name="exec_nome_exercicio">Supino Reto</string>
+    <string name="exec_serie">Série 1 de 4</string>
+    <string name="exec_imagem_desc">Ilustração do exercício</string>
+    <string name="exec_carga">Carga (kg)</string>
+    <string name="exec_repeticoes">Repetições</string>
+    <string name="exec_menos">-</string>
+    <string name="exec_mais">+</string>
+    <string name="exec_diminuir_carga">Diminuir carga</string>
+    <string name="exec_aumentar_carga">Aumentar carga</string>
+    <string name="exec_diminuir_repeticoes">Diminuir repetições</string>
+    <string name="exec_aumentar_repeticoes">Aumentar repetições</string>
+    <string name="exec_descanso">TEMPO DE DESCANSO</string>
+    <string name="exec_tempo">01:30</string>
+    <string name="exec_restante">restante</string>
+    <string name="exec_pausar">Pausar</string>
+    <string name="exec_concluir">Concluir série</string>
+</resources>

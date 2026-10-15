@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="exec_bg">#0B1130</color>
+    <color name="exec_card">#141B3D</color>
+    <color name="exec_border">#1E264F</color>
+    <color name="exec_orange">#E64600</color>
+    <color name="exec_red">#E61B1B</color>
+    <color name="exec_text_primary">#FFFFFF</color>
+    <color name="exec_text_secondary">#9BA1C7</color>
+    <color name="exec_image_bg">#194574</color>
+</resources>
