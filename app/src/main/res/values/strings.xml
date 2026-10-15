@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gyema</string>
+    <string name="welcome">SEJA BEM-VINDO!</string>
+    <string name="brand">GYEMA</string>
+    <string name="training">TREINOS</string>
+    <string name="academy">ACADEMIA UNIFOR</string>
+    <string name="tagline">A sua evolução ao\nmais alto nível</string>
+    <string name="description">Rotina adaptada ao objetivo. Treinos\npersonalizados.</string>
+    <string name="login">Entrar em sua conta</string>
+    <string name="register">Primeiro acesso? Cadastre-se</string>
+    <string name="terms">Termos de uso</string>
+    <string name="privacy">Privacidade</string>
+    <string name="support">Suporte TI</string>
+    <string name="brand_description">Símbolo Gyema</string>
+</resources>
